@@ -15,6 +15,10 @@ Beautiful  UI components build with vue and ant design
 - 封装复杂性，提供简单友好的api
 - 基于ant design样式优化
 
+##开发扩展
+使用npm install安装
+然后输入 npm run dev 运行开发环境
+
 ## 引入
 使用npm或者yarn
 ```
