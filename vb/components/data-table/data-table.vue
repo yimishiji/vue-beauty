@@ -62,7 +62,7 @@
 
                         <tbody :class="prefix + '-tbody'" v-show="current.length">
                         <template v-for="(item,index) in current">
-                            <tr :style="'background:' + (item.YMBackgroundColor ? item.YMBackgroundColor : '#fff')" v-show="!treeTable || item.vshow" @click="clickRow(index)" @mouseover="hoverRow(index)" :class="getRowClass(index)">
+                            <tr :style="'background:' + (item.YMBackgroundColor ? item.YMBackgroundColor : '')" v-show="!treeTable || item.vshow" @click="clickRow(index)" @mouseover="hoverRow(index)" :class="getRowClass(index)">
                                 <td v-if="checkType" :class="prefix + '-selection-column'">
                                     <v-checkbox v-show="!treeTable || item.level ==1" v-model="item['vb_dt_checked']" @click.native.stop="rowSelectionChange(index)"></v-checkbox>
                                 </td>
@@ -125,7 +125,7 @@
 
                             <tbody :class="prefix + '-tbody'" v-show="current.length">
                             <template v-for="(item,index) in current">
-                                <tr :style="'background:' + (item.YMBackgroundColor ? item.YMBackgroundColor : '#fff')" v-show="!treeTable || item.vshow" @click="clickRow(index)" @mouseover="hoverRow(index)" :class="getRowClass(index)">
+                                <tr :style="'background:' + (item.YMBackgroundColor ? item.YMBackgroundColor : '')" v-show="!treeTable || item.vshow" @click="clickRow(index)" @mouseover="hoverRow(index)" :class="getRowClass(index)">
                                     <td v-if="checkType" :class="prefix + '-selection-column'">
                                         <v-checkbox v-if="checkType=='checkbox'" v-model="item['vb_dt_checked']" @click.native.stop="rowSelectionChange(index)"></v-checkbox>
                                     </td>
@@ -176,7 +176,7 @@
 
                             <tbody :class="prefix + '-tbody'" v-show="current.length">
                             <template v-for="(item,index) in current">
-                                <tr :style="'background:' + (item.YMBackgroundColor ? item.YMBackgroundColor : '#fff')" v-show="!treeTable || item.vshow" @click="clickRow(index)" @mouseover="hoverRow(index)" :class="getRowClass(index)">
+                                <tr :style="'background:' + (item.YMBackgroundColor ? item.YMBackgroundColor : '')" v-show="!treeTable || item.vshow" @click="clickRow(index)" @mouseover="hoverRow(index)" :class="getRowClass(index)">
                                     <td v-if="cindex >= columns.length - fixedRight" v-for="(column,cindex) in columns">
 
                                         <slot name="td" :content="item[column.field]" :item="item" :column="column"

@@ -532,7 +532,7 @@
 ### Datatable Props
 | 参数      | 说明          | 类型      | 默认值  |
 |---------- |-------------- |---------- |-------- |
-| data | 获取表格数据的函数，初始化必需参数，返回值必须是Promise对象,该函数默认接收一个请求参数，参数构造请见data arguments | Function | - |
+| data | 获取表格数据的函数，初始化必需参数，返回值必须是Promise对象,该函数默认接收一个请求参数，参数构造请见data arguments.若表格数据中，示例{"id": 1, "pid": 0,"name": "高级动物","time": "03:37","singer": "窦唯","album": "摇滚中国乐势力","isparent":true,"YMBackgroundColor":"pink"}含有 `YMBackgroundColor` 字段并且赋值可以自定义当前行颜色 | Function | - |
 | currentData.sync | 表格当前数据,业务开发中也可以直接修改currentData,从而重新渲染表格（仅推荐用于客户端排序、数据过滤等场景） | Array | [] |
 | bordered | 是否展示外边框和列边框 | Boolean | false |
 | stripe | 是否显示间隔斑马纹 | Boolean | false |
