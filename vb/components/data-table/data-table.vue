@@ -66,7 +66,7 @@
                                 <td v-if="checkType" :class="prefix + '-selection-column'">
                                     <v-checkbox v-show="!treeTable || item.level ==1" v-model="item['vb_dt_checked']" @click.native.stop="rowSelectionChange(index)"></v-checkbox>
                                 </td>
-                                <td v-for="(column,cindex) in columns">
+                                <td v-for="(column,cindex) in columns" v-if="column.field != 'YMBackgroundColor'">
                                     <template v-if="treeTable && cindex==treeTableOption.position">
                                         <span :class="prefix + '-row-indent indent-level-' + item.level" :style="{'padding-left':item.paddingLeft}"></span>
                                         <span v-if="item.isparent" @click="toggle(item,index)" :class="prefix + '-row-expand-icon ' + prefix + '-row-' + (item.vopen ? 'expanded' : 'collapsed')"></span>
